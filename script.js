@@ -45,11 +45,11 @@ const displayAverageSalary = function (employees) {
 // Select a random employee
 const getRandomEmployee = function (employees) {
   // TODO: Select and display a random employee
-  const randomEmployeeIndex = Math.floor(Math.random() * employees.length);
-
-  const randomEmployee = employees[randomEmployeeIndex];
-  const fullName = `Random selected employee name is : ${randomEmployee.firstName} ${randomEmployee.lastName}`;
-  console.log(fullName);
+  const randomEmployeeIndex = Math.floor(Math.random() * employees.length); // For the get random number we can use math.random() method, whic it will return number between 0,1 and one , when we multiply with * employees arrays lenght it wil return number with decimal.We can use math.flor() to get rid of decimal
+  //
+  const randomEmployee = employees[randomEmployeeIndex]; // get random index number from Employees array set as randomEmployee variable
+  const fullName = `Random selected employee name is : ${randomEmployee.firstName} ${randomEmployee.lastName}`; // Setting fullname variable, getting proprety from employee(whic has 3 properepty of name,lastname,salary)
+  console.log(fullName); // show Fullname  on console
 };
 
 /*
