@@ -4,22 +4,25 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 // Collect employee data
 const collectEmployees = function () {
   // TODO: Get user input to create and return an array of employee objects
-  let employees = [];
+  let employees = []; // Setting an empty array for employess.That will get input from user
 
+  // We have add employees until user choice to not add more. So we have use while loop, While(statment){do}.
   while (confirm('Would you like add an other employee ?')) {
-    let firstName = prompt('Please enter first name: ');
-    let lastName = prompt('Please enter last name: ');
+    //getting a confirmation from user
+    let firstName = prompt('Please enter first name: '); // variable for Employee first name
+    let lastName = prompt('Please enter last name: '); // variable for Employee last name
 
     let salary = parseFloat(
       prompt('Please enter employee salary(only number): ')
     );
     if (isNaN(salary)) {
+      //isNaN checking for data type is number or not ,and if it`s a number return true if is not returns false
       salary = 0;
       console.warn();
-      ('Invalid input , salary set default $0.');
+      ('Invalid input , salary set default $0.'); //Setting salary as 0 default, showoing warn on consolo
     }
-    const employee = { firstName, lastName, salary };
-    employees.push(employee);
+    const employee = { firstName, lastName, salary }; // employee variable , each employee has 3 propertys
+    employees.push(employee); // Taking employee and pushing array of employees that we crate in the begining
   }
   return employees;
 };
